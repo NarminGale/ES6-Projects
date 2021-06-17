@@ -40,6 +40,10 @@ const startSlider = (type) => {
   const last = document.querySelector('.last')
   let next = active.nextElementSibling
 
+  if (!next) {
+    next = container.firstElementChild
+  }
+
   active.classList.remove(['active'])
   last.classList.remove(['last'])
   next.classList.remove(['next'])
