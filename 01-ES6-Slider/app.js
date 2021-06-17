@@ -9,6 +9,7 @@ container.innerHTML = people
   .map((person, slideIndex) => {
     const { img, name, job, text } = person
     //   more logic later
+    console.log(slideIndex)
     let position = 'next'
     if (slideIndex === 0) {
       position = 'active'
@@ -17,7 +18,7 @@ container.innerHTML = people
       position = 'last'
     }
 
-    return `<article class="slide">
+    return `<article class="slide ${position}">
           <img
             src="${img}"
             alt="${name}"
